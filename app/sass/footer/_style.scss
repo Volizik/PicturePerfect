@@ -1,0 +1,78 @@
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 115px 0;
+  background-color: #192431;
+  color: #fff;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__side {
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    @include breakpoint(max-width 992px) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &:last-of-type {
+      padding-left: 100px;
+      @include breakpoint(max-width 720px) {
+        padding-left: 0px;
+      }
+    }
+    h3 {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    p {
+      font-size: 13px;
+    }
+    input[type="text"] {
+      height: 48px;
+      max-width: 400px;
+      width: calc(100% - 48px);
+      border: none;
+      float: left;
+      box-sizing: border-box;
+      padding: 0px 10px;
+    }
+    input[type="submit"] {
+      height: 48px;
+      width: 48px;
+      float: left;
+      border: none;
+      background: url(../img/icons/check-mark.png) center center no-repeat #82ca9c;
+      padding: 0;
+      color: transparent;
+    }
+    span {
+      display: block;
+      color: #57697f;
+      font-size: 12px;
+      margin-top: 15px;
+      float: left;
+      max-width: 340px;
+    }
+  }
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    &--item {
+      width: 30%;
+      min-width: 135px;
+      a {
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 13px;
+        color: #fff;
+        margin: 5px 0;
+      }
+    }
+  }
+}

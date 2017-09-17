@@ -7,25 +7,37 @@
     right: 100px;
     top: -500px;
     width: 500px;
+    @include breakpoint(max-width 992px) {
+      display: none;
+    }
   }
   h2 {
-    font-size: 35px;
-    font-weight: 300;
     margin-top: 100px;
+  }
+  h3 {
+    color: #67676d;
+  }
+  p {
+    font-size: 14px;
+    color: #a3a3a3;
   }
   &__start {
     position: relative;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    flex-wrap: wrap;
     &--item {
       position: relative;
       width: 49%;
+      @include breakpoint(max-width 600px) {
+        width: 100%;
+      }
       &:last-of-type {
         margin-top: 71px;
-      }
-      p {
-        font-size: 14px;
+        @include breakpoint(max-width 992px) {
+          margin-top: 0;
+        }
       }
     }
   }
@@ -33,17 +45,15 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     &--item {
       position: relative;
       width: 23.5%;
-      h3 {
-        font-family: Open Sans, sans-serif;
-        font-size: 13px;
-        font-weight: 600;
+      @include breakpoint(max-width 992px) {
+        width: 48%;
       }
-      p {
-        font-family: Open Sans, sans-serif;
-        font-size: 14px;
+      @include breakpoint(max-width 600px) {
+        width: 100%;
       }
     }
   }
